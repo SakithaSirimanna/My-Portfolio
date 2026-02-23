@@ -25,7 +25,7 @@
 
       // ========== TYPING EFFECT (hero) ==========
       const typedSpan = document.getElementById('typed');
-      const phrases = ['Sakitha Sirimannaa ','a developerr ', 'a creatorr '];
+      const phrases = ['Sakitha Sirimanna ','a developer ', 'a creator '];
       let i = 0;
       let j = 0;
       let currentPhrase = [];
