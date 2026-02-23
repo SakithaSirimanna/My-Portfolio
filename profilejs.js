@@ -1,4 +1,4 @@
-// script.js – all functionality combined
+ // script.js – all functionality combined
 
     document.addEventListener('DOMContentLoaded', function () {
       // ========== DARK MODE TOGGLE ==========
