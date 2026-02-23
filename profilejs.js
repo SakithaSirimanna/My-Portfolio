@@ -25,7 +25,7 @@
 
       // ========== TYPING EFFECT (hero) ==========
       const typedSpan = document.getElementById('typed');
-      const phrases = ['a developer', 'a creator', 'Sakitha Sirimanna'];
+      const phrases = ['Sakitha Sirimanna ','a developer ', 'a creator '];
       let i = 0;
       let j = 0;
       let currentPhrase = [];
@@ -94,10 +94,11 @@
 
         // back-to-top visibility
         const backBtn = document.getElementById('backToTop');
-        if (window.scrollY > 300) {
-          backBtn.style.display = 'flex';
+           
+        if (window.scrollY > 2) {
+          backBtn.classList.add('show');
         } else {
-          backBtn.style.display = 'none';
+          backBtn.classList.remove('show');
         }
       });
 
