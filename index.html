@@ -1,185 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sakitha Sirimanna - Portfolio</title>
-    <link rel="stylesheet" href="profilecss.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakitha Sirimanna  portfolio</title>
+  <!-- Font Awesome for icons (lightweight, no framework) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: modern minimal font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="profilecss2.css">
 </head>
-<body data-theme="dark">
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">SAKI</div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <button class="theme-toggle" id="themeToggle">🌙</button>
+<body>
+  <!-- STICKY NAVIGATION BAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo">Sakitha<span class="logo-dot">.</span></div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <!-- dark mode toggle (optional but included) -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+      <!-- simple mobile menu toggle (hamburger) – extra for better mobile UX -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION (full-screen) -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1 class="hero-name">Sakitha Sirimanna</h1>
+      <div class="hero-tagline">
+        <span class="static-text">I'm stock</span>
+        <span class="typed-text" id="typed"></span>
+      </div>
+      <p class="hero-description">Aspiring Software Engineer / Web Developer</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn primary-btn"><i class="fas fa-code"></i> View Projects</a>
+        <a href="#contact" class="btn secondary-btn"><i class="fas fa-paper-plane"></i> Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Hello! I'm Sakitha Sirimanna, a passionate developer with a love for crafting clean, responsive web experiences. I'm currently diving deep into full‑stack development and enjoy turning ideas into interactive reality.</p>
+          <p><strong>Education:</strong> B.ICT in Information and Communication Technology (expected 2026) · University of Kelaniya, Sri Lanka</p>
+          <p><strong>Interests:</strong> UI/UX, open source, AI tools, and building side projects using AI that matter.</p>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 id="heroText">Sakitha Sirimanna</h1>
-            <p class="tagline">Aspiring Software Engineer / Web Developer</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
-            </div>
+        <div class="about-image">
+          <!-- profile image placeholder (modern minimal) -->
+          <div class="profile-placeholder">
+            <i class="fas fa-user-astronaut"></i>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="profile-img"><img src="logo.png" alt="Saki" width=300px></div>
-            <div class="about-text">
-                <h3>Hello, I'm Sakitha!</h3>
-                <p>I'm an undergraduate student in Information and Communication Technology, passionate about creating innovative web solutions and mastering modern development technologies.</p>
-                <p>Currently focused on front-end development, responsive design, and exploring full-stack engineering. I love turning complex problems into simple, beautiful experiences.</p>
-                <p><strong>Education:</strong> <a href="https://fct.kln.ac.lk/degree-programmes/communication-technology" style="color:white">BICT Degree Program</a> | <a href="https://www.kln.ac.lk/" style="color:white">University of Kelaniya, Sri Lanka</a></p>
-            </div>
+  <!-- SKILLS SECTION (progress bars / cards with hover) -->
+  <section id="skills" class="skills section">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <!-- skill items with progress bar -->
+        <div class="skill-card">
+          <div class="skill-info"><span>HTML5</span><span>70%</span></div>
+          <div class="progress-bar"><div class="progress" style="width:70%"></div></div>
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card fade-in">
-                <div class="skill-header">
-                    <span class="skill-name">HTML5 & CSS3</span>
-                    <span class="skill-percentage" data-width="95">70%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-width="95"></div>
-                </div>
-            </div>
-            <div class="skill-card fade-in">
-                <div class="skill-header">
-                    <span class="skill-name">JavaScript</span>
-                    <span class="skill-percentage" data-width="85">60%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-width="85"></div>
-                </div>
-            </div>
-            <div class="skill-card fade-in">
-                <div class="skill-header">
-                    <span class="skill-name">Responsive Design</span>
-                    <span class="skill-percentage" data-width="90">65%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-width="90"></div>
-                </div>
-            </div>
-            <div class="skill-card fade-in">
-                <div class="skill-header">
-                    <span class="skill-name">Git & Version Control</span>
-                    <span class="skill-percentage" data-width="80">70%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-width="80"></div>
-                </div>
-            </div>
+        <div class="skill-card">
+          <div class="skill-info"><span>CSS3 / Flex/Grid</span><span>70%</span></div>
+          <div class="progress-bar"><div class="progress" style="width:85%"></div></div>
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card fade-in">
-                <div class="project-image">📱</div>
-                <div class="project-content">
-                    <h3 class="project-title">Responsive Portfolio</h3>
-                    <p class="project-description">Modern, responsive portfolio website built with HTML, CSS, and JavaScript featuring smooth animations and dark/light mode toggle.</p>
-                    <div class="cta-buttons">
-                        <a href="#" class="btn btn-primary btn-sm">Demo</a>
-                        <a href="#" class="btn btn-secondary btn-sm">Source</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-image">💻</div>
-                <div class="project-content">
-                    <h3 class="project-title">Task Management App</h3>
-                    <p class="project-description">Full-featured task manager with drag & drop functionality, local storage, and beautiful UI/UX design.</p>
-                    <div class="cta-buttons">
-                        <a href="#" class="btn btn-primary btn-sm">Demo</a>
-                        <a href="#" class="btn btn-secondary btn-sm">Source</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-image">🌐</div>
-                <div class="project-content">
-                    <h3 class="project-title">Weather Dashboard</h3>
-                    <p class="project-description">Real-time weather application consuming public APIs with interactive charts and location-based forecasts.</p>
-                    <div class="cta-buttons">
-                        <a href="#" class="btn btn-primary btn-sm">Demo</a>
-                        <a href="#" class="btn btn-secondary btn-sm">Source</a>
-                    </div>
-                </div>
-            </div>
+        <div class="skill-card">
+          <div class="skill-info"><span>JavaScript (ES6+)</span><span>80%</span></div>
+          <div class="progress-bar"><div class="progress" style="width:80%"></div></div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <h3>Let's connect!</h3>
-                <div class="contact-item">
-                    <span>📧</span>
-                    <span><a href="sakithasirimanna1117@gmail.com" style="color:white">sakithasirimanna1117@gmail.com</a></span>
-                </div>
-                <div class="contact-item">
-                    <span>📱</span>
-                    <span>+94 71 6131 220</span>
-                </div>
-                <div class="contact-item">
-                    <span>📍</span>
-                    <span>Colombo, Western Province, Sri Lanka</span>
-                </div>
-                <div style="margin-top: 2rem;">
-                    <a href="https://github.com/SakithaSirimanna" style="margin-right: 1rem; font-size: 1.5rem;color:white ">GitHub</a>
-                    <a href="https://lk.linkedin.com/in/sakitha-sirimanna-484127379" style="font-size: 1.5rem; color:white">LinkedIn</a>
-                </div>
-            </div>
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Sujeewa Peris"required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="youremail@email.com"required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="This is a sample message for you to get an idea"required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-            </form>
+        <div class="skill-card">
+          <div class="skill-info"><span>React</span><span>75%</span></div>
+          <div class="progress-bar"><div class="progress" style="width:75%"></div></div>
         </div>
-    </section>
+        <div class="skill-card">
+          <div class="skill-info"><span>Node.js</span><span>70%</span></div>
+          <div class="progress-bar"><div class="progress" style="width:70%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-info"><span>Python</span><span>65%</span></div>
+          <div class="progress-bar"><div class="progress" style="width:65%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 Sakitha Sirimanna. All rights reserved.</p>
-    </footer>
+  <!-- PROJECTS SECTION (cards with hover) -->
+  <section id="projects" class="projects section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <!-- project card 1 -->
+        <div class="project-card">
+          <div class="project-img" style="background:#2a2a3a"></div>
+          <h3>Weather Dashboard</h3>
+          <p>Real‑time weather app using OpenWeather API. Displays 5‑day forecast with dynamic backgrounds.</p>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img" style="background:#3a2a4a"></div>
+          <h3>TaskFlow</h3>
+          <p>Minimalist to‑do app with local storage, drag‑drop, and dark mode. Built with vanilla JS.</p>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img" style="background:#2a4a4a"></div>
+          <h3>Portfolio v1</h3>
+          <p>My first portfolio website with smooth scroll and CSS grid. Fully responsive.</p>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop">^</button>
+  <!-- CONTACT SECTION + FORM VALIDATION -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <h2 class="section-title">Get in touch</h2>
+      <div class="contact-grid">
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name">
+            <small class="error-msg" id="nameError"></small>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com">
+            <small class="error-msg" id="emailError"></small>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="What would you like to say?"></textarea>
+            <small class="error-msg" id="msgError"></small>
+          </div>
+          <button type="submit" class="btn primary-btn submit-btn"><i class="fas fa-paper-plane"></i> Send message</button>
+          <p id="formSuccess" class="success-msg"></p>
+        </form>
+        <div class="contact-social">
+          <p>Or find me on</p>
+          <div class="social-icons">
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="profilejs.js"></script>
+  <!-- FOOTER + BACK TO TOP BUTTON -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2025 Sakitha Sirimanna. All rights reserved.</p>
+      <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+    </div>
+  </footer>
+
+  <script src="profilejs2.js"
+  </script>
 </body>
 </html>
